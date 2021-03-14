@@ -1,0 +1,14 @@
+@mixin before_oval {
+  &:before {
+    content: '';
+    position: absolute;
+    width: 74px;
+    height: 38px;
+    background: $main-color;
+    border-radius: 8px;
+    left: -10px;
+    top: -2px;
+    z-index: -1;
+
+  }
+}

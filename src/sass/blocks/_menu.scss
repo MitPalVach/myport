@@ -1,0 +1,161 @@
+.burger {
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  height: 21px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  cursor: pointer;
+
+  span {
+    display: block;
+    width: 40px;
+    height: 3px;
+    background: #000;
+  }
+}
+
+.menu {
+  position: fixed;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 500px;
+  z-index: 10;
+  visibility: hidden;
+  opacity: 0;
+  transition: .7s all;
+
+  &.active {
+    left: 0;
+    visibility: visible;
+    opacity: 1;
+  }
+
+  &__block {
+    position: relative;
+    width: 345px;
+    background: $main-color;
+    height: 100%;
+    padding: 100px 0 0 40px;
+    transition: .7s all;
+    z-index: 11;
+  }
+
+  &__close {
+    position: absolute;
+    top: 25px;
+    right: 25px;
+    cursor: pointer;
+
+  }
+
+  &__list {
+  }
+
+  &__link {
+    transition: .1s all;
+
+    &:hover {
+      background: #000;
+      color: $main-color;
+    }
+
+    a {
+      font-size: 20px;
+      line-height: 32px;
+    }
+  }
+
+  &__social {
+    bottom: 25px;
+    width: 90px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    a {
+      width: 20px;
+      height: 20px;
+    }
+
+    &-git {
+      position: absolute;
+      bottom: 25px;
+      transition: 1s all;
+
+      &:hover {
+        transform: translateY(-5px);
+      }
+    }
+
+    &-ins {
+      position: absolute;
+      bottom: 25px;
+      left: 70px;
+      transition: 1s all;
+
+      &:hover {
+        transform: translateY(-5px);
+      }
+    }
+
+    &-fb {
+      position: absolute;
+      bottom: 25px;
+      left: 100px;
+      transition: 1s all;
+
+      &:hover {
+        transform: translateY(-5px);
+      }
+    }
+  }
+
+  &__overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #ffffff;
+    opacity: .75;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
