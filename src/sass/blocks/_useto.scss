@@ -1,0 +1,73 @@
+.useto {
+
+  &__title {
+    position: relative;
+    @include before_oval;
+    margin-bottom: 50px;
+
+  }
+
+  &__inner {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 50px;
+
+  }
+
+  &__item {
+    height: 300px;
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
+    border: 2px solid #342020;
+    padding: 8px;
+    border-radius: 10px;
+    background: #c9e9e4;
+
+
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

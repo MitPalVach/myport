@@ -1,5 +1,4 @@
 .about {
-  margin-bottom: 80px;
 
   &__wrapper {
     display: grid;
@@ -19,22 +18,11 @@
     color: #000000;
     @include before_oval;
 
-    &:after {
-      content: '';
-      position: absolute;
-      height: 5px;
-      width: 416px;
-      background: $main-color;
-      right: 0;
-      top: 15px;
-      border-radius: 5px;
-
-    }
 
   }
 
   &__subtitle {
-    margin-bottom: 10px;
+    margin: 20px 0;
   }
 
   &__descr {
