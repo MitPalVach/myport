@@ -1,0 +1,229 @@
+@media (max-width: 1300px) {
+
+  .panel {
+    display: none;
+  }
+
+}
+
+
+//== 1200 ======================================
+
+@media (max-width: 1200px) {
+  .portfolio {
+
+    &__wrapper {
+      justify-content: space-around;
+      grid-template-rows: 280px;
+      grid-template-columns: repeat(auto-fit, 280px);
+
+      .horizontal {
+        grid-row: unset;
+        grid-column: unset;
+      }
+
+      .vertical {
+        grid-row: unset;
+        grid-column: unset;
+      }
+
+    }
+
+    &__item {
+      img {
+        height: 100%;
+
+      }
+    }
+  }
+
+}
+
+//== 993 ======================================
+
+@media (max-width: 993px) {
+
+  .about {
+
+    &__wrapper {
+      display: block;
+    }
+  }
+
+  .about__photo {
+    display: none;
+  }
+
+  .about__descr-items {
+    gap: 3px;
+  }
+
+  .contacts__photo {
+    display: none;
+  }
+
+}
+
+//== 769 ======================================
+
+@media (max-width: 769px) {
+
+  .header__inner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .header__right {
+    display: none;
+  }
+
+  .useto__inner {
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 10px;
+  }
+
+}
+
+//== 621 ======================================
+
+@media (max-width: 621px) {
+
+  .contacts__form {
+    display: block;
+  }
+.contacts__input, .contacts__textarea {
+  margin-bottom: 20px;
+}
+
+
+}
+
+//== 577 ======================================
+
+@media (max-width: 577px) {
+
+  .about__descr-items {
+    display: block;
+  }
+
+
+}
+
+
+//== 501 ======================================
+
+@media (max-width: 501px) {
+
+  .useto__inner {
+    grid-template-rows: repeat(5, 1fr);
+    grid-template-columns: 1fr;
+
+  }
+
+  .contacts__descr {
+    width: 95%;
+  }
+
+  .contacts__policy {
+    span {
+    font-size: 10px;
+      a{
+    font-size: 10px;
+
+      }
+    }
+  }
+
+}
+
+
+//== 421 ======================================
+
+@media (max-width: 421px) {
+
+  .container {
+    width: 100%;
+    padding: 0 5px;
+  }
+
+  .header__left {
+  }
+  .header__text {
+    width: 300px;
+
+  }
+
+  .header__title {
+    font-size: 18px;
+  }
+
+  .header__subtitle {
+    width: 280px;
+    font-size: 14px;
+  }
+
+  .menu__block {
+    width: 90%;
+  }
+
+  .contacts__triggers {
+    display: block;
+
+  }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

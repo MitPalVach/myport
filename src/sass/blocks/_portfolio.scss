@@ -16,12 +16,14 @@
 
   &__item {
     transition: .5s all;
+
     img {
       width: 100%;
       border: 2px solid #342020;
       border-radius: 10px;
-
+      object-fit: cover;
     }
+
     &:hover {
       transform: scale(1.05);
 

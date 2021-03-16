@@ -60,9 +60,10 @@
       cursor: pointer;
       font-weight: 700;
       border-radius: 8px;
+      transition: .5s all;
 
       &:hover {
-        box-shadow: 5px 5px 20px $main-color;
+        box-shadow: 0 0 20px $main-color;
 
       }
     }
