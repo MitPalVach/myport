@@ -1,0 +1,519 @@
+@import "vars";
+@import "libs";
+@import "fonts";
+@import "global";
+
+.header {
+  position: fixed;
+  top: 30px;
+  left: 0;
+  right: 0;
+  z-index: 10;
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 30px;
+    text-transform: uppercase;
+    @extend %comfb
+  }
+
+  .logo {
+    &:hover {
+      color: #000000;
+    }
+
+  }
+
+  &__btn{
+    color: #fff;
+    background-color: transparent;
+    padding: 6px 28px;
+    border: 1px solid #ffffff;
+    border-radius: 6px;
+    margin-right: 8px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all .5s;
+
+    &:hover {
+      color: #000;
+      background: #ffffff;
+    }
+  }
+
+  &__phone {
+    @extend %comfb
+  }
+}
+
+.menu {
+  &__list-item {
+    display: inline-block;
+
+    & + .menu__list-item {
+      padding-left: 20px;
+      @extend %comfb
+    }
+  }
+
+  &__list-phone {
+    display: none;
+  }
+
+  &__btn {
+    display: none;
+  }
+
+  &__list-link:hover {
+    text-decoration: overline underline;
+  }
+}
+
+.top {
+  background-image: url("../images/bg-2.jpg");
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(45.97% 54.43% at 50% 45.57%, rgba(23, 26, 28, 0) 50.28%, rgba(23, 26, 28, 0.00225974) 50.29%, rgba(4, 5, 5, 0.820343) 58.72%, rgba(5, 5, 6, 0.792703) 80.08%, #000000 87.89%);
+    opacity: 0.1;
+  }
+
+  &__wrapper {
+    display: flex;
+    align-items: flex-start;
+  }
+
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+  }
+
+  &__title {
+    font-size: 80px;
+    line-height: 96px;
+    @extend %comfb;
+    margin-top: 140px;
+  }
+
+  &__inner-img {
+    margin: 20px 0;
+  }
+
+  &__text {
+    font-size: 24px;
+    max-width: 500px;
+    margin: 25px 0;
+  }
+
+  &__social-item {
+    display: inline-block;
+    margin: 0 50px;
+  }
+
+  &__social-img {
+    width: 40px;
+    height: 40px;
+  }
+
+  &__social-link {
+    opacity: .6;
+    transition: all .5s;
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+}
+
+//          Second page
+
+.about {
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    padding-left: 50px;
+  }
+
+  &__text {
+    max-width: 440px;
+
+    p {
+      margin-bottom: 30px;
+    }
+  }
+
+  &__slider-box {
+    position: relative;
+  }
+
+  &__slider {
+    max-width: 700px;
+
+    &::before {
+      content: '';
+      border-radius: 12px;
+      position: absolute;
+      width: 700px;
+      height: 467px;
+      border: 3px solid #ffffff;
+      top: -15px;
+      right: -20px;
+    }
+
+    &-img {
+      border-radius: 12px;
+      background-repeat: no-repeat;
+      background-size: cover;
+
+    }
+  }
+}
+
+.slider-btn {
+  padding: 16px 26px;
+  border: none;
+  background-color: #fff;
+  position: absolute;
+  cursor: pointer;
+  bottom: -48px;
+  right: 0;
+  z-index: 5;
+  border-radius: 8px;
+
+  svg {
+    stroke: #000000;
+  }
+
+  &__left {
+    right: 64px;
+  }
+}
+
+//                 Third page
+
+.benefits {
+  &__items {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  &__item {
+    margin-bottom: 100px;
+    display: flex;
+    align-items: flex-end;
+
+    &:nth-child(even) {
+      margin-left: 50px;
+      transform: translateY(-30px);
+    }
+  }
+
+  &__item-1,
+  &__item-3 {
+    position: relative;
+
+    &::before,
+    &::after {
+      content: '';
+      position: absolute;
+      background-repeat: no-repeat;
+    }
+  }
+
+  &__item-1 {
+    &::before {
+      height: 120px;
+      width: 290px;
+      background-image: url('../images/line-1.svg');
+      right: -70px;
+      bottom: 120px;
+    }
+  }
+
+  &__item-3 {
+    &::before {
+      width: 260px;
+      height: 200px;
+      background-image: url("../images/line-2.svg");
+      right: -70px;
+      bottom: 155px;
+    }
+
+    &::after {
+      width: 230px;
+      height: 160px;
+      background-image: url("../images/line-3.svg");
+      right: -100px;
+      bottom: 70px;
+    }
+  }
+
+  &__num {
+    font-size: 28px;
+    line-height: 34px;
+    @extend %comfb;
+    margin-right: 10px;
+  }
+
+  &__img {
+    position: relative;
+    margin-right: 32px;
+
+    &-picture {
+      width: 250px;
+      border-radius: 8px;
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      width: 250px;
+      height: 167px;
+      border: 2px solid #ffffff;
+      border-radius: 8px;
+      right: -12px;
+      top: -12px;
+      z-index: -1;
+    }
+  }
+
+  &__info {
+    width: 300px;
+  }
+
+  &__info-title {
+    width: 130px;
+    font-size: 21px;
+    line-height: 24px;
+    @extend %comfb;
+    margin-bottom: 10px;
+  }
+}
+
+//                 Fourth page
+
+.services {
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__item {
+    position: relative;
+    border: 4px solid #fff;
+    border-radius: 12px;
+    background-color: rgba(0, 0, 0, .3);
+
+    &-title {
+      font-size: 18px;
+      line-height: 60px;
+      padding: 0 20px;
+
+    }
+  }
+
+}
+
+//                        Fifth page
+
+.reviews {
+  &__items {
+    max-width: 755px;
+    padding-bottom: 15px;
+  }
+
+  &__item {
+    margin-bottom: 4px;
+    background-color: rgba(0, 0, 0, 0.3);
+    max-width: 690px;
+    border-radius: 10px;
+    border: #ffffff 2px solid;
+
+  }
+
+  &__item-title {
+    font-size: 20px;
+    line-height: 30px;
+    padding: 16px 10px 16px 30px;
+    position: relative;
+    cursor: pointer;
+
+    &::after {
+      content: url("../images/arrow_down.svg");
+      position: absolute;
+      width: 66px;
+      height: 66px;
+      border-radius: 10px;
+      background-color: #fff;
+      right: -72px;
+      top: -2px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+
+  &__item-text {
+    padding: 0 10px 60px 50px;
+    margin: 0;
+    display: none;
+  }
+
+  &__item.reviews__item--active {
+    border: #ffffff 2px solid;
+
+    .reviews__item-title::after {
+      transform: rotate(180deg);
+    }
+
+    .reviews__item-text {
+      display: block;
+    }
+  }
+}
+
+//                        Sixth page
+
+.contacts {
+  &__inner {
+    display: flex;
+    padding-left: 25px;
+  }
+
+  &__info {
+    width: 240px;
+    margin-right: 40px;
+  }
+
+  &__info-box {
+    margin: 0 0 0 30px
+  }
+
+  &__info-title {
+    margin-bottom: 30px;
+    font-size: 24px;
+    line-height: 34px;
+  }
+
+  &__info-phone,
+  &__info-email {
+    font-size: 18px;
+    line-height: 24px;
+  }
+
+  &__info-email:hover {
+    text-decoration: underline;
+  }
+
+  &__form {
+    width: 500px;
+    margin-right: 106px;
+  }
+
+  &__form-title {
+    margin-bottom: 15px;
+    font-size: 28px;
+    line-height: 40px;
+
+  }
+
+  &__form-text {
+    margin: 0 0 12px;
+  }
+
+  &__form-line {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__form-input {
+    width: 49%;
+    background: rgba(0, 0, 0, .3);
+    padding: 15px;
+    color: #fff;
+    margin: 3px;
+    border: 2px solid #fff;
+    border-radius: 10px;
+
+
+    &::placeholder {
+      color: rgba(#fff, .4);
+    }
+  }
+
+  &__form-textarea {
+    background: rgba(0, 0, 0, .3);
+    padding: 15px;
+    color: #fff;
+    margin: 3px;
+    min-height: 150px;
+    width: 92%;
+    resize: none;
+    border: 2px solid #fff;
+    border-radius: 10px;
+
+    &::placeholder {
+      color: rgba(#fff, .4);
+    }
+
+  }
+
+  &__form-btn {
+    color: #fff;
+    background-color: transparent;
+    padding: 6px 28px;
+    border: 2px solid #ffffff;
+    border-radius: 6px;
+    margin-right: 8px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all .5s;
+
+    &:hover {
+      color: #000;
+      background: #ffffff;
+    }
+  }
+
+  &__social-list {
+    display: flex;
+    justify-content: center;
+  }
+
+  &__social-item {
+    margin: 25px;
+    display: inline-block;
+  }
+
+  &__social-link {
+    opacity: .5;
+    &:hover{
+      opacity: 1;
+    }
+  }
+
+  &__social-img {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+.footer {
+  position: absolute;
+  left: 100px;
+  bottom: 100px;
+  &__copy {
+    text-align: left;
+  }
+}
+
+@import "media";

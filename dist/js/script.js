@@ -5,15 +5,43 @@ window.addEventListener('DOMContentLoaded', () => {
         closeBtn = document.querySelector('.menu__close'),
         overlay = document.querySelector('.menu__overlay');
 
-    burger.addEventListener('click', () => {
-        menu.classList.add('active');
-        document.body.style.overflow = 'hidden';
-    });
 
-    closeBtn.addEventListener('click', () => {
-        menu.classList.remove('active');
-        document.body.style.overflow = '';
-    });
+    burger.addEventListener('click', toggleActive);
+    closeBtn.addEventListener('click', toggleActive);
+
+    function toggleActive() {
+        if (menu.classList.contains('active')) {
+            menu.classList.remove('active');
+            document.body.style.overflow = '';
+        } else {
+            menu.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+    }
+    
+// или
+    //
+    // function openMenu() {
+    //     menu.classList.add('active');
+    //     document.body.style.overflow = 'hidden';
+    // }
+    //
+    // function closeMenu() {
+    //     menu.classList.remove('active');
+    //     document.body.style.overflow = '';
+    // }
+
+// или
+
+    // burger.addEventListener('click', () => {
+    //     menu.classList.add('active');
+    //     document.body.style.overflow = 'hidden';
+    // });
+    //
+    // closeBtn.addEventListener('click', () => {
+    //     menu.classList.remove('active');
+    //     document.body.style.overflow = '';
+    // });
 
     overlay.addEventListener('click', () => {
         menu.classList.toggle('active');
