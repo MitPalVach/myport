@@ -36,7 +36,7 @@
   &__block {
     position: relative;
     width: 345px;
-    background: $main-color;
+    background: #F7DF1E;
     height: 100%;
     padding: 100px 0 0 40px;
     transition: .7s all;
@@ -55,13 +55,15 @@
   }
 
   &__link {
+
+    display: block;
     transition: .1s all;
     padding: 5px 0;
     cursor: pointer;
 
     &:hover {
       background: #000;
-      color: $main-color;
+      color: #F7DF1E;
     }
 
     a {

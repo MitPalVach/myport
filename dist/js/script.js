@@ -3,6 +3,7 @@ window.addEventListener('DOMContentLoaded', () => {
     const burger = document.querySelector('.burger'),
         menu = document.querySelector('.menu'),
         closeBtn = document.querySelector('.menu__close'),
+        // daria = document.querySelector('#daria'),
         overlay = document.querySelector('.menu__overlay');
 
 
@@ -18,7 +19,7 @@ window.addEventListener('DOMContentLoaded', () => {
             document.body.style.overflow = 'hidden';
         }
     }
-    
+
 // или
     //
     // function openMenu() {
@@ -54,4 +55,6 @@ window.addEventListener('DOMContentLoaded', () => {
         }
         document.body.style.overflow = '';
     });
+
+
 });
